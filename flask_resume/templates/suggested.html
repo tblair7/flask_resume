@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Insight Data Science Project">
+    <meta name="author" content="Tyler Blair">
+
+    <title>Tyler Blair - Gathering Steam</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static2/css/jumbotron.css" rel="stylesheet">
+ </head>
+
+ <style>
+.button {
+  background-color: #FABB3B; /* Green */
+  border: #27291C;
+  color: #27291C;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  text-shadow:none;
+}
+
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */
+.button5 {background-color: #555555;} /* Black */
+
+body {
+  background-color: #333;
+}
+
+.submit {
+  background-color: #FABB3B; /* Green */
+  border: #27291C;
+  color: #27291C;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  text-shadow:none;
+}
+
+
+
+.jumbotron {
+  background-color: #333;
+}
+
+
+</style>
+
+  <body>
+
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">
+              <i>
+                  <font color="white">Gathering <font color="#FABB3B">Steam<font color='k'>
+              </i>
+          </h1>
+          <p>
+              <font color="white">Gathering Steam utilizes sentiment analysis of Steam game reviews as a function of time to provide game developers
+          an early alert to predicted changes in game ratings and topics that are related to these predictions such that the developers can make informed decisions
+      about additional game changes. <font color="black">
+        </p>
+          <p>
+              <a class="button" href="/ARK" role="button">
+                  <b> Example 1: ARK </b>
+              </a>
+              <a class="button" href="/No_Mans_Sky" role="button">
+                  <b> Example 2: No Man's Sky </b>
+              </a>
+              <a class="button" href="/Monster_Hunter_World" role="button" background-color: "#FABB3B">
+                  <b> Example 3: Monster Hunter World </b>
+              </a>
+
+          </p>
+
+
+          <form action = "/suggested" method = "POST">
+              <p>
+                  <font color = 'white'> Is there another game you'd like to see? </font> </br>
+                  <input type = "text" name = "game" />
+              </p>
+              <p>
+                  <b><input type = "submit" value = "Submit" class='button' /></b>
+              </p>
+              <p>
+                  <font color = 'white'> Thank you for suggesting <b>{{suggestion}}</b> as another example!</font>
+              </p>
+          </form>
+
+
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h3>
+                <font color="white">
+                    My GitHub
+            </h3>
+            <p>
+                If you'd like to view other examples of my work:
+            </p>
+            <p>
+                <a class="btn-secondary" href="https://www.github.com/tblair7" role="button">
+                    <font color="#FABB3B">
+                        Go to GitHub »
+                    </a>
+                </p>
+          </div>
+          <div class="col-md-4">
+            <h3>
+                <font color="white">
+                    My LinkedIn
+            </h3>
+            <p>
+                If you'd like to connect or view my other accomplishments:
+            </p>
+            <p>
+                <a class="btn-secondary" href="https://www.linkedin.com/in/tylerjblair" role="button">
+                    <font color="#FABB3B">
+                        Go to Linkedin »
+                    </a>
+                </p>
+          </div>
+          <div class="col-md-4">
+            <h3>
+                <font color="white">
+                Insight
+            </h3>
+            <p>
+                To learn more about Insight Data Science:
+            </p>
+            <p>
+                <a class="btn-secondary" href="https://www.insightdatascience.com/" role="button">
+                    <font color="#FABB3B">
+                        Go to Insight »
+                </a>
+            </p>
+          </div>
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script> -->
+
+
+</body></html>
