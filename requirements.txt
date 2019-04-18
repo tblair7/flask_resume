@@ -1,0 +1,5 @@
+pandas
+pickle
+requests
+json
+Flask
