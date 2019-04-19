@@ -127,6 +127,15 @@ html::after {
 
 </style>
 
+<header-2 class="navbar-fixed-top">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/PlaylistGeneration">Start New Playlist</a></li>
+        </ul>
+    </nav>
+</header-2>
+
 <body>
 
     <!-- Preloader -->
@@ -148,7 +157,10 @@ html::after {
                 <p style="text-align:left; margin-left:180px;margin-right:100px;">
                     Here you can make a playlist based on any song from my personal database of music consisting of nearly 5000 songs! <br/>
                     To make this possible, I have extracted 37 audio features from the waveform files of each song. <br/>
-                    Several of these features are then used to find a song's k-nearest neighbors.
+                    Several of these features are then used to find a song's k-nearest neighbors. <br/><br/>
+                    To get started, enter a partial song or artist name and how many songs you want in the playlist.<br/>
+                    For example, if you wanted a 20 song playlist of songs like "Not Myself" by John Mayer,<br/>
+                    You could simply enter Mayer and 20 in the fields on the right.
                 </p>
 
 
@@ -159,15 +171,15 @@ html::after {
 
     </div>
 
-    <div class="section" id="about">
-        <div class="container" style="position:absolute; ">
+
+        <div class="container">
+
             <form action = "/PlaylistGeneration/results" method = "POST">
     		    <input type="text" name="title" placeholder="Partial name of song or artist"><br/><br/>
-                <input type="number" name="num_songs" placeholder="Number of songs"><br/><br/>
+                <input type="number" name="num_songs" placeholder="Number of songs (50 max)"><br/><br/>
                 <b><input type = "submit" value = "Make me a playlist!" class='button'></b> <!--  onclick="window.location.href = '/PlaylistGeneration/results';" -->
             </form>
         </div>
-    </div>
 
 
 

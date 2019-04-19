@@ -231,6 +231,14 @@ header {
     height: 65px;
 }
 
+header-2 {
+    text-align: left;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    height: 65px;
+    margin-left: 180px;
+}
+
 nav ul {
     display: inline-block;
     padding-left: 0;

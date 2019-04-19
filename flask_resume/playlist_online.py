@@ -19,6 +19,7 @@ def makePlaylistMatch(matches, selection, num_songs):
 
     import pickle as pckl
     import pandas as pd
+    import requests
 
     from sklearn.metrics import pairwise_distances
     import shutil, os
@@ -37,12 +38,16 @@ def makePlaylistMatch(matches, selection, num_songs):
     yt_ids = ','.join(features_df.iloc[neighbor_indices].index.tolist())
     yt_url = 'http://www.youtube.com/watch_videos?video_ids=' + yt_ids
 
-    return yt_url # if a dataframe of the related titles is desired.
+    r = requests.get(yt_url)
+    yt_embed = r.url.split('list=')[1]
+
+    return yt_url, yt_embed # if a dataframe of the related titles is desired.
 
 def makePlaylist(matches, selection, num_songs):
 
     import pickle as pckl
     import pandas as pd
+    import requests
 
     from sklearn.metrics import pairwise_distances
     import shutil, os
@@ -61,7 +66,10 @@ def makePlaylist(matches, selection, num_songs):
     yt_ids = ','.join(features_df.iloc[neighbor_indices].index.tolist())
     yt_url = 'http://www.youtube.com/watch_videos?video_ids=' + yt_ids
 
-    return yt_url # if a dataframe of the related titles is desired.
+    r = requests.get(yt_url)
+    yt_embed = r.url.split('list=')[1]
+
+    return yt_url, yt_embed# if a dataframe of the related titles is desired.
 
 
 #url_base = 'http://www.youtube.com/watch_videos?video_ids='
