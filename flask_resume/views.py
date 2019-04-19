@@ -116,9 +116,9 @@ def playlistResults():
                                    matches = matches,
                                    num_songs = num_songs))
 
-           resp.set_cookie('num_songs', json.dumps(num_songs))
-           resp.set_cookie('query', title)
-           resp.set_cookie('num_results', json.dumps(num_results))
+           resp.set_cookie('num_songs', json.dumps(num_songs), max_age=300)
+           resp.set_cookie('query', title, max_age=300)
+           resp.set_cookie('num_results', json.dumps(num_results), max_age=300)
 
 #           for number, title in enumerate(results):
 #               resp.set_cookie(number, title)
@@ -128,9 +128,10 @@ def playlistResults():
 
        else:
            selection = int(1)
-           playlist = playlist_online.makePlaylistMatch(matches, selection, num_songs)
+           playlist, yt_embed = playlist_online.makePlaylistMatch(matches, selection, num_songs)
            return render_template('generate_playlist.html',
-                                   playlist = playlist)
+                                   playlist = playlist,
+                                   yt_embed = yt_embed)
 
     else:
         return "error"
@@ -152,8 +153,8 @@ def playlistGenerate():
 
         if selection <= num_results and selection > 0:
             results, matches = playlist_online.songQuery(title, num_songs)
-            playlist = playlist_online.makePlaylistMatch(matches, selection, num_songs)
-            return render_template('generate_playlist.html', playlist = playlist)
+            playlist, yt_embed = playlist_online.makePlaylistMatch(matches, selection, num_songs)
+            return render_template('generate_playlist.html', playlist = playlist, yt_embed = yt_embed)
 
         else:
             return render_template('playlist_no_results.html')
