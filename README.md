@@ -25,7 +25,7 @@ Game ratings have the ability to affect a game's visibility, sales, and ultimate
 Utilizing sentiment analysis of Steam game reviews as a function of time, Gathering Steam has the capability of providing game developers an early alert to predicted changes in game ratings. Additionally, topics are extracted from reviews within each timeframe such that the developers can make informed decisions about additional game changes.  
 
 __Skills/Tools:__  
-_Python, AWS, Natural Language Processing (NLP), Scikit-learn (sklearn), Flask, SQL (sqlite3), Natural Language Toolkit (NLTK), Steam API_  
+_Python, AWS, Natural Language Processing (NLP), Scikit-learn (sklearn), Flask, SQL (sqlite3), Natural Language Toolkit (NLTK), Steam API, HTML, CSS_  
 
 #### [Personalized Playlist Generation](http://tylerblair.net/PlaylistGeneration)  
 __Description:__  
